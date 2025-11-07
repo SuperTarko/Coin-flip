@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="app.js" defer></script>
+    <title>Coin flip</title>
+  </head>
+  <body>
+    <h1>Coin flip</h1>
+
+    <button onclick="game('heads')">Heads</button>
+    <button onclick="game('tails')">Tails</button>
+    <button
+      onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+    "
+    >
+      Reset Score
+    </button>
+  </body>
+</html>
