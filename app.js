@@ -36,6 +36,11 @@ function game(playerChoice) {
 
   localStorage.setItem("score", JSON.stringify(score));
 
-  alert(`The flip was ${flipResult}. ${result}
-Wins: ${score.wins}, Losses ${score.losses}`);
+  updateScoreElement();
+
+  document.querySelector(".js-result").innerHTML = result;
+}
+
+function updateScoreElement(){
+  document.querySelector(".js-score").innerHTML = `Wins: ${score.wins}, Losses ${score.losses}`
 }

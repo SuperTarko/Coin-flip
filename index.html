@@ -4,22 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Coin flip</title>
   </head>
   <body>
-    <h1>Coin flip</h1>
+    <div class="container">
+      <h1>Coin flip</h1>
 
-    <button onclick="game('heads')">Heads</button>
-    <button onclick="game('tails')">Tails</button>
-    <button
+      <div class="buttons">
+
+        <button onclick="game('heads')" class="move-button">
+          <img src="img/heads-emoji.png" class="move-icon">
+        </button>
+
+        <button onclick="game('tails')" class="move-button">
+          <img src="img/tails-emoji.png" class="move-icon">
+        </button>
+
+      </div>
+
+      <button
       onclick="
-      score.wins = 0;
-      score.losses = 0;
-      score.ties = 0;
-      localStorage.removeItem('score');
-    "
-    >
-      Reset Score
-    </button>
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+      "
+      class="reset-score-button"
+      >
+        Reset Score
+      </button>
+
+    
+
+      <p class="js-result result"></p>
+      <p class="js-score score"></p>
+    </div>
   </body>
 </html>
